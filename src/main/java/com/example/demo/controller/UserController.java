@@ -53,6 +53,7 @@ public class UserController {
     public User update(@PathVariable("id") final long id, @RequestBody final User user)
     {
         user.setId(id);
+        user.setRoles(null);
         return userService.save(user);
     }
 
