@@ -8,6 +8,11 @@ import java.util.Set;
 
 @Entity
 public class Role {
+    public Role(@NotBlank(message = "Name is mandatory") String name, Set<User> users) {
+        this.name = name;
+        this.users = users;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
