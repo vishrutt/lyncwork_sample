@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 @RestController
-@RequestMapping({"/user","/User"})
+@RequestMapping({"/users","/Users"})
 public class UserController {
 
     @Autowired

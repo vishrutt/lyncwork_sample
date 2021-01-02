@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 
 @RestController
-@RequestMapping({"/role","/Role"})
+@RequestMapping({"/roles","/Roles"})
 public class RoleController {
 
     @Autowired
