@@ -50,7 +50,7 @@ public class RoleController {
     @DeleteMapping(value = "/{id}", consumes = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
     public Role delete(@PathVariable("id") final long id, @RequestBody final Role role)
     {
-        roleService.delete(role);
+        roleService.delete(id);
         return role;
     }
 

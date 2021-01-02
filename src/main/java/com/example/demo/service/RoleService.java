@@ -30,9 +30,9 @@ public class RoleService {
        return roleRepository.save(role);
     }
 
-    public void delete(Role role)
+    public void delete(long id)
     {
-        roleRepository.delete(role);
+        roleRepository.deleteById(id);
     }
 
 

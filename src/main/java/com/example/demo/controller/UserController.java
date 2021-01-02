@@ -60,7 +60,7 @@ public class UserController {
     @DeleteMapping(value = "/{id}", consumes = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
     public User delete(@PathVariable("id") final long id, @RequestBody final User user)
     {
-        userService.delete(user);
+        userService.delete(id);
         return user;
     }
 }
