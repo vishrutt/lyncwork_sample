@@ -4,11 +4,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
 public class Role {
-    public Role(@NotBlank(message = "Name is mandatory") String name, Set<User> users) {
+    public Role() {
+    }
+
+    public Role(String name, Set<User> users) {
         this.name = name;
         this.users = users;
     }
@@ -46,5 +50,18 @@ public class Role {
 
     public void setUsers(Set<User> users) {
         this.users = users;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Role role = (Role) o;
+        return name.equals(role.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
