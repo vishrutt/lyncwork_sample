@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.customExceptions.NameNotFoundException;
+import com.example.demo.customexceptions.NameNotFoundException;
 import com.example.demo.model.Role;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
