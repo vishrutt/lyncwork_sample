@@ -33,7 +33,7 @@ public class RoleController {
     {
         if(StringUtils.isEmpty(role.getName()))
         {
-            throw new NameNotFoundException("Name is mandatory");
+            throw new NameNotFoundException("{role.name: Name is mandatory}");
         }
         return roleService.save(role);
     }
@@ -43,6 +43,7 @@ public class RoleController {
     public Role update(@PathVariable("id") final long id, @RequestBody final Role role)
     {
         role.setId(id);
+        role.setUsers(null);
         return roleService.save(role);
     }
 
